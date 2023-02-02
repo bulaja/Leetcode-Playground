@@ -1,3 +1,17 @@
+# Done on June 1st, 2022
+
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        
+        if (len(nums) == len(set(nums))):
+            return False
+        else:
+            return True
+
+# Runtime: 482 ms, faster than 81.37% of Python3 online submissions for Contains Duplicate.
+# Memory Usage: 26 MB, less than 29.98% of Python3 online submissions for Contains Duplicate.
+
+
 # Done on: May 24th, 2022
 
 class Solution:
@@ -10,6 +24,10 @@ class Solution:
                 d[num] = 1
                 
         return False
+        
+# Runtime: 779 ms, faster than 12.74% of Python3 online submissions for Contains Duplicate.
+# Memory Usage: 26 MB, less than 72.36% of Python3 online submissions for Contains Duplicate.
+
         
 
 
@@ -36,7 +54,4 @@ Output: true
 Constraints:
 1 <= nums.length <= 105
 -109 <= nums[i] <= 109 """
-
-# Runtime: 779 ms, faster than 12.74% of Python3 online submissions for Contains Duplicate.
-# Memory Usage: 26 MB, less than 72.36% of Python3 online submissions for Contains Duplicate.
 
