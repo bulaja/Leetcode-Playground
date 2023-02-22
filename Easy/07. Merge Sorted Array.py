@@ -1,3 +1,16 @@
+# Done on Feb 23rd, 2023
+
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        nums1[:] = sorted(nums1[:m] + nums2[:n])
+
+# Runtime 30 ms, Beats 97.38%
+# Memory 13.8 MB, Beats 77.29%
+
+
 # Done on May 30th, 2022
 
 class Solution:
@@ -34,6 +47,10 @@ class Solution:
         # if there are still elements in array nums2
         # we can just add them at the start of nums1
         # as they are already sorted
+
+       
+# Runtime: 79 ms, faster than 6.77% of Python3 online submissions for Merge Sorted Array.
+# Memory Usage: 13.9 MB, less than 38.04% of Python3 online submissions for Merge Sorted Array.
         
         
 """
@@ -78,7 +95,4 @@ nums2.length == n
 1 <= m + n <= 200
 -109 <= nums1[i], nums2[j] <= 109
 """
-        
-# Runtime: 79 ms, faster than 6.77% of Python3 online submissions for Merge Sorted Array.
-# Memory Usage: 13.9 MB, less than 38.04% of Python3 online submissions for Merge Sorted Array.
                 
