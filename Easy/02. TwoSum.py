@@ -1,3 +1,21 @@
+# Done on Feb 23rd, 2023
+
+class Solution:
+   def twoSum(self, nums: List[int], target: int) -> List[int]:
+       seen = {}
+
+       for index, value in enumerate(nums):
+           remaining = target - nums[index]
+           
+           if remaining in seen:
+               return [index, seen[remaining]]
+            
+           seen[value] = index
+
+# Runtime 52 ms, Beats 98.42%
+# Memory 15.1 MB, Beats 39.56%
+
+
 # Done on: May 25th, 2022
 
 class Solution:
@@ -12,6 +30,9 @@ class Solution:
                 return [index, nums.index(second) + 1]
             
             index +=1   # Increase counter
+
+# Runtime: 730 ms, faster than 34.41% of Python3 online submissions for Two Sum.
+# Memory Usage: 15.1 MB, less than 64.13% of Python3 online submissions for Two Sum.
         
 
 """            
@@ -48,5 +69,3 @@ Only one valid answer exists.
 
 """            
 
-# Runtime: 730 ms, faster than 34.41% of Python3 online submissions for Two Sum.
-# Memory Usage: 15.1 MB, less than 64.13% of Python3 online submissions for Two Sum.
