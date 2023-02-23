@@ -1,3 +1,20 @@
+# Done on Feb 23rd, 2023
+
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        final_list = []
+
+        for value in nums1:
+            if value in nums2:
+                final_list.append(value)
+                nums2.remove(value)
+                
+        return final_list
+
+# Runtime 65 ms, Beats 31.6%
+# Memory 14 MB, Beats 44.18%
+
+
 # Done on: May 26th, 2022
 
 class Solution:
@@ -12,7 +29,9 @@ class Solution:
                 final.append(num)
 
         return final
-    
+
+# Runtime: 107 ms, faster than 11.56% of Python3 online submissions for Intersection of Two Arrays II.
+# Memory Usage: 13.9 MB, less than 85.19% of Python3 online submissions for Intersection of Two Arrays II.
     
     
 # For each number in the first array
@@ -47,6 +66,3 @@ Constraints:
 
 """
 
-
-# Runtime: 107 ms, faster than 11.56% of Python3 online submissions for Intersection of Two Arrays II.
-# Memory Usage: 13.9 MB, less than 85.19% of Python3 online submissions for Intersection of Two Arrays II.
