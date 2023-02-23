@@ -1,4 +1,4 @@
-# Done on Feb 23rd, 2023
+# Done on Feb 22nd, 2023
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
