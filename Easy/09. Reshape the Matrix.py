@@ -1,3 +1,26 @@
+# Done on Feb 24th, 2023
+
+class Solution:
+    def matrixReshape(self, mat: List[List[int]], r: int, c: int) -> List[List[int]]:
+        m = len(mat)
+        n = len(mat[0])
+
+        if r*c != m * n:
+            return mat
+
+        flattened = sum(mat, [])
+
+        new_mat = r *[c * [0]]
+
+        for i in range(0,r):
+            new_mat[i] = flattened[c*i:c*(i+1)]
+                
+        return new_mat
+
+# Runtime 84 ms, Beats 94.29%
+# Memory 14.7 MB, Beats 28.70%
+
+
 # Done on May 30th, 2022
 
 class Solution:
@@ -26,7 +49,11 @@ class Solution:
             new_mat.append(temp)                    # add a row to the list
 
         return new_mat
-        
+
+
+# Runtime: 129 ms, faster than 43.65% of Python3 online submissions for Reshape the Matrix.
+# Memory Usage: 14.8 MB, less than 13.82% of Python3 online submissions for Reshape the Matrix.
+
 
 """
 566. Reshape the Matrix
@@ -62,8 +89,3 @@ n == mat[i].length
 1 <= r, c <= 300
 
 """   
-
-
-
-# Runtime: 129 ms, faster than 43.65% of Python3 online submissions for Reshape the Matrix.
-# Memory Usage: 14.8 MB, less than 13.82% of Python3 online submissions for Reshape the Matrix.
