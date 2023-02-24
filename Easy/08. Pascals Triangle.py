@@ -1,3 +1,25 @@
+# Done on Feb 24th, 2023
+
+class Solution:
+    def generate(self, numRows: int) -> List[List[int]]:
+        pasc = [[1]]
+        i = 1
+        
+        while i < numRows:
+            old = [0] + pasc[i-1] + [0]
+            new = []
+            for j in range(len(old)-1):
+                num = old[j] + old[j+1]
+                new.append(num)
+            pasc.append(new)
+            i +=1
+
+        return pasc
+
+# Runtime 17 ms, Beats 99.93%
+# Memory 13.8 MB, Beats 58.7%
+
+
 # Done on May 30th, 2022
 
 class Solution:
@@ -23,6 +45,9 @@ class Solution:
             
         return pasc                         # return pascal list
             
+# Runtime: 51 ms, faster than 27.44% of Python3 online submissions for Pascal's Triangle.
+# Memory Usage: 13.8 MB, less than 97.71% of Python3 online submissions for Pascal's Triangle.
+        
 
 """
 118. Pascal's Triangle
@@ -50,7 +75,3 @@ Constraints:
 1 <= numRows <= 30
 
 """
-
-# Runtime: 51 ms, faster than 27.44% of Python3 online submissions for Pascal's Triangle.
-# Memory Usage: 13.8 MB, less than 97.71% of Python3 online submissions for Pascal's Triangle.
-        
