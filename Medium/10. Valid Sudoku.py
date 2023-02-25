@@ -1,3 +1,47 @@
+# Done on Feb 25th, 2023
+
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        for i in range(0,9):
+            row_dict = {}
+            col_dict = {}
+            for elem in board[i]:
+                if elem == '.':
+                    continue
+                        
+                if elem not in row_dict.keys():
+                    row_dict[elem] = 1
+                else:
+                    return False
+            
+            for elem in [row[i] for row in board]:
+                if elem == '.':
+                    continue
+                        
+                if elem not in col_dict.keys():
+                    col_dict[elem] = 1
+                else:
+                    return False
+
+        for j in range(0,9,3):
+            for k in range(0,9,3):
+                grid_dict = {}
+                grid = sum([piece[k:k+3] for piece in board[j:j+3]], [])
+                
+                for elem in grid:
+                    if elem == '.':
+                        continue
+
+                    if elem not in grid_dict.keys():
+                        grid_dict[elem] = 1
+                    else:
+                        return False
+        
+        return True
+
+# Runtime 92 ms, Beats 89.52%
+# Memory 14 MB, Beats 25.91%
+
 # Done on May 31st, 2022
 
 class Solution:
@@ -67,6 +111,10 @@ class Solution:
 # Code should be written in a more concise manner,
 # but since we are bound by 9x9 Sudoku's it is acceptable
 
+# Runtime: 128 ms, faster than 50.89% of Python3 online submissions for Valid Sudoku.
+# Memory Usage: 14 MB, less than 34.49% of Python3 online submissions for Valid Sudoku.
+
+
 """
 36. Valid Sudoku
 Medium
@@ -123,7 +171,4 @@ board[i].length == 9
 board[i][j] is a digit 1-9 or '.'.
 
 """
-# Runtime: 128 ms, faster than 50.89% of Python3 online submissions for Valid Sudoku.
-# Memory Usage: 14 MB, less than 34.49% of Python3 online submissions for Valid Sudoku.
-
 
