@@ -1,3 +1,40 @@
+# Done on Feb 26th, 2023
+
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+
+        for i in range(len(ransomNote)):
+            if ransomNote[i] in magazine:
+                magazine = magazine.replace(str(ransomNote[i]),'', 1)
+            else:
+                return False
+        
+        return True
+
+
+# Runtime 42 ms Beats 90.1% 
+# Memory 14.2 MB Beats 46.11%
+
+
+# Done on Feb 26th, 2023
+
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+
+        note = list(ransomNote)
+        magazine = list(magazine)
+
+        for letter in note:
+            if letter in magazine:
+                magazine.remove(letter)
+            else:
+                return False
+        
+        return True
+
+# Runtime 59 ms Beats 61.25% 
+# Memory 14.4 MB Beats 5.3%
+
 # Done on May 31st, 2022
 
 
@@ -21,6 +58,10 @@ class Solution:
                 return False
         
         return True
+
+
+# Runtime: 66 ms, faster than 71.26% of Python3 online submissions for Ransom Note.
+# Memory Usage: 14.1 MB, less than 53.33% of Python3 online submissions for Ransom Note.
     
             
 # Go through both ransom note and magazine
@@ -62,7 +103,3 @@ Constraints:
 1 <= ransomNote.length, magazine.length <= 105
 ransomNote and magazine consist of lowercase English letters.
 """         
-
-
-# Runtime: 66 ms, faster than 71.26% of Python3 online submissions for Ransom Note.
-# Memory Usage: 14.1 MB, less than 53.33% of Python3 online submissions for Ransom Note.
