@@ -1,3 +1,14 @@
+# Done on Feb 26th, 2023
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return sorted(s) == sorted(t)
+
+# Runtime 49 ms Beats 74.61%
+# Memory 15.1 MB Beats 10.88%
+
+
+
 # Done on: May 30th, 2022
 
 class Solution:
@@ -21,7 +32,10 @@ class Solution:
             return True
         else:
             return False
-                
+
+# Runtime: 73 ms, faster than 43.27% of Python3 online submissions for Valid Anagram.
+# Memory Usage: 14.5 MB, less than 66.93% of Python3 online submissions for Valid Anagram.
+
 
 # Create separate dictionaries for both words
 # Have unique characters act as keys in them
@@ -50,7 +64,4 @@ Constraints:
 1 <= s.length, t.length <= 5 * 104
 s and t consist of lowercase English letters.
 """
-
-# Runtime: 73 ms, faster than 43.27% of Python3 online submissions for Valid Anagram.
-# Memory Usage: 14.5 MB, less than 66.93% of Python3 online submissions for Valid Anagram.
 
